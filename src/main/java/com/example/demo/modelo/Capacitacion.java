@@ -1,13 +1,18 @@
 package com.example.demo.modelo;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Capacitacion {
-	
+@Table(name="capacitaciones")
+public class Capacitacion implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -15,10 +20,7 @@ public class Capacitacion {
 	private String detalle;
 	
 	
-	public Capacitacion(int id, String nombre, String detalle) {		
-		this.id = id;
-		this.nombre = nombre;
-		this.detalle = detalle;
+	public Capacitacion() {			
 	}
 
 

@@ -42,29 +42,26 @@
 	</header>
 	<main>
 		<div class="container-fluid mt-3 mb-3 pt-3 pb-5 pe-4 ps-4 rounded formulario">
-		<form>
+		<form th:action="@{/save}" method="post" th:object="${capacitacion}">
 			<div class="d-flex justify-content-center">
 					<img class="mb-4" src="/images/capacitacion.png" alt="" width="60"
 						height="60">
 				</div>
 				<h1 class="h3 mb-3 fw-normal text-center">Crear capacitación</h1>
 			<div class="mb-3">
-				<label for="name" class="form-label">Nombre de la capacitación
+				<label for="nombre" class="form-label">Nombre de la capacitación
 					</label> <input type="text" class="form-control"
-					id="name">
+					id="nombre" th:field="*{nombre}">
 			</div>			
 			<div class="mb-3">
-				<label for="description" class="form-label">Detalle capacitación</label>
-				<textarea class="form-control" id="description"
+				<label for="detalle" class="form-label">Detalle capacitación</label>
+				<textarea class="form-control" id="detalle" th:field="*{detalle}"
 					rows="3"></textarea>
 			</div>
 			<div class="d-flex justify-content-center">
 				<button type="submit" class="w-100 btn btn-md btn-primary">Crear
 					capacitación</button>
 			</div>
-
-
-
 		</form>
 		</div>
 	

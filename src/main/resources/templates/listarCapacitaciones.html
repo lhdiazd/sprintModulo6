@@ -43,7 +43,7 @@
 	<main>
 		<div class="container-fluid w-75 mt-3" id="contenedor-tabla">
 			<h1 class="h3 mb-3 fw-normal text-center">Listado de capacitaciones</h1>
-			<table class="table text-center table-striped">
+			<table th:if="${capacitaciones != null and !capacitaciones.empty}" class="table text-center table-striped">
 				<thead class="table-dark">
 					<tr>
 						<th scope="col">Id</th>
@@ -52,10 +52,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+					<tr th:each="capacitacion: ${capacitaciones}">
+						<td th:text="${capacitacion.id}"></td>
+						<td th:text="${capacitacion.nombre}"></td>
+						<td th:text="${capacitacion.detalle}"></td>
 					</tr>					
 				</tbody>
 			</table>
