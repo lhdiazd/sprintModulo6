@@ -1,0 +1,39 @@
+body{
+    background-image: url('/images/fondo.jpg');
+    background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center; 
+  	height: 100%;
+  	background-attachment: fixed;
+  	
+}
+
+
+
+.formulario{
+	
+	min-width: 400px;
+	max-width: 35%;
+	
+}
+
+#container-inicio{
+	min-width: 500px;
+}
+
+@media (max-width : 991px) {
+	#container-inicio{				
+		justify-content:center;	
+		align-items: center;
+		
+	}
+	#container-inicio #presentacion{	
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#container-inicio #img-container{
+		margin: 0 auto;	
+	}
+	
+}
