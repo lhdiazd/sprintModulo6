@@ -25,8 +25,16 @@ public class CapacitacionServiceImpl implements CapacitacionService {
 
 	@Override
 	@Transactional
-	public void crearCapacitacion(Capacitacion capacitacion) {		
-	    iCapacitacionDao.save(capacitacion);	
+	public boolean crearCapacitacion(Capacitacion capacitacion) {
+		try {
+			iCapacitacionDao.save(capacitacion);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+
+		}
+
 	}	
 	
 }

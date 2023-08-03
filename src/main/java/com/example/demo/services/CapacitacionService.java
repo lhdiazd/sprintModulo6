@@ -7,5 +7,5 @@ import com.example.demo.modelo.Capacitacion;
 
 public interface CapacitacionService {
 	public List<Capacitacion> obtenerCapacitaciones();	
-	public void crearCapacitacion(Capacitacion capacitacion);
+	public boolean crearCapacitacion(Capacitacion capacitacion);
 }
