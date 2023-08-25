@@ -3,10 +3,10 @@ package com.example.demo.dao;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.modelo.Capacitacion;
+import com.example.demo.modelo.Visita;
 
 
 @Repository
-public interface ICapacitacionDao extends CrudRepository<Capacitacion, Integer> {
-	
+public interface IVisitaDao extends CrudRepository<Visita, Integer> {
+
 }
